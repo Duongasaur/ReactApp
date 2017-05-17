@@ -54,12 +54,12 @@ body {
 }
 
 .sub-header {
-    position: absolute; 
-    left: 0px;
-    width: calc(100vw);
-    background-color: #222;
-    height: 30px;
-    padding-top: 10px;
+  position: absolute; 
+  left: 0px;
+  width: calc(100vw);
+  background-color: #222;
+  height: 30px;
+  padding-top: 10px;
 }
 
 .sub-header__link {
@@ -67,6 +67,12 @@ body {
   cursor: pointer;
   color: #7fe3ff;
   font-size: 15px;
+}
+
+.link-back {
+  text-decoration: none;
+  color: #7fe3ff;
+  font-size: 20px;
 }
 
 .sub-header__link:not(:first-child) {
@@ -145,12 +151,10 @@ body {
 
 .hero-square:hover .hero-picture {
   display: none;
-  transition: ease-in-out;
 }
 
 .hero-square:hover .hero-description {
-  display: inline-block;
-  transition: ease-in-out;
+  display: block;
 }
 
 .hero-picture-wrap {
@@ -186,7 +190,10 @@ body {
   display: inline-block;
   padding: 10px;
   vertical-align: top;
+<<<<<<< HEAD
 
+=======
+>>>>>>> Virgin commit
   width: 600px;
 }
 

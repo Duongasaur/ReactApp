@@ -2,7 +2,7 @@ import React from "react";
 
 const SubHeader = ({page, pageLimit, changePageCallBack}) => {
 	const displayNextPage = (page < pageLimit);
-	const notFirstPage = page != 0;
+	const notFirstPage = page !== 0;
 
 	return (
         <div className="sub-header">

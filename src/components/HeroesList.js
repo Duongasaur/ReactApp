@@ -22,7 +22,7 @@ class HeroList extends Component {
 		if(backOrForwards === "backward") {
 			offset -= 20;
 		}
-		else if(backOrForwards == "forward") {
+		else if(backOrForwards === "forward") {
 			offset += 20;
 		}
 		this.props.fetchHerosList(offset);

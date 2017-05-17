@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import "./../App.css";
 
+import "./../App.css";
 import MarvelousHeader from "./headers/Header.js";
 import { fetchHero } from "../actions/MarvelAction";
-
 
 class HeroPage extends Component {
 	constructor(props) {
@@ -22,31 +21,30 @@ class HeroPage extends Component {
 		const {
 			heroesDetails: heroesDetails
 		} = this.props;
-	
-		console.log(heroesDetails);
 
 		return (
-      <div className="App">
-		<MarvelousHeader />
-		<div className="main-content">
-			<div className="sub-header">
-				<Link to="/" className="link-Back"> 
-					Back
-				</Link>
+			<div className="App">
+				<MarvelousHeader />
+				<div className="main-content">
+					<div className="sub-header">
+						<Link to="/" className="link-back"> 
+							Back
+						</Link>
+					</div>
+					<div className="hero-details-wrap">
+						<div className="hero-details-name">
+							{heroesDetails.name}
+						</div>
+						<div className="hero-picture-main-wrap">
+							<img className="hero-picture-main" src={heroesDetails.thumbnail.path + "." + heroesDetails.thumbnail.extension} />
+						</div>
+						<div className="hero-description-main">
+							{heroesDetails.description}
+						</div>
+					</div>
+				</div>
 			</div>
-			<div className="hero-details-wrap">
-				<div className="hero-details-name">
-					{heroesDetails.name}
-				</div>
-				<div className="hero-picture-main-wrap">
-					<img className="hero-picture-main" src={heroesDetails.thumbnail.path + "." + heroesDetails.thumbnail.extension} />
-				</div>
-				<div className="hero-description-main">
-					{heroesDetails.description}
-				</div>
-			</div>
-		</div>
-      </div>
+
 		);
 	}
 }
